@@ -26,7 +26,7 @@ on:
     paths:
       - 'luci-theme-argon/Makefile'
 env:
-  TZ: Asia/Shanghai
+  TZ: Asia/Jakarta
 
 
 jobs:
@@ -87,7 +87,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: sdk
-          key: openwrt-sdk-snapshot-x86-64
+          key: openwrt-sdk-24.10.2-x86-64
 
       - name: Initialization environment
         if: steps.cache-sdk.outputs.cache-hit != 'true'
